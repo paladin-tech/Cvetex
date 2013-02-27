@@ -1,0 +1,8 @@
+2013/02/18 00:06:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\Cvetex\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/cvetex/index.php?r=gii
+---
