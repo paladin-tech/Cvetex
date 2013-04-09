@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_unicode_ci">cvetex</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="sport" view="colnames">
+<left>406</left>
+<top>132</top>
+<width>108</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `sport` (
+  `sportId` int(11) NOT NULL AUTO_INCREMENT,
+  `sportName` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`sportId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+<table name="article" view="colnames">
+<left>185</left>
+<top>135</top>
+<width>155</width>
+<height>226</height>
+<sql_create_table>CREATE TABLE `article` (
+  `articleId` int(11) NOT NULL AUTO_INCREMENT,
+  `articleName` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sportId` int(11) DEFAULT NULL,
+  `sizes` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `techCharacteristics` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `collarType` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `zipper` tinyint(1) DEFAULT '0',
+  `sex` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `colors` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`articleId`),
+  KEY `FK_artikal` (`sportId`),
+  CONSTRAINT `FK_artikal` FOREIGN KEY (`sportId`) REFERENCES `sport` (`sportId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

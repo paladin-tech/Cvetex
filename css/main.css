@@ -1,172 +1,196 @@
-body
-{
+body {
 	margin: 0;
 	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	/*color: #555;*/
+	/*font: normal 10pt Arial,Helvetica,sans-serif;*/
+	/*background: #EFEFEF;*/
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	/*text-align: center;*/
 }
 
-#page
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
+#page {
+	/*margin-top: 5px;*/
+	/*margin-bottom: 5px;*/
 	background: white;
-	border: 1px solid #C9E0ED;
+	/*border: 1px solid #C9E0ED;*/
 }
 
-#header
-{
-	margin: 0;
+#headerContainer {
+	background: url("../images/HeaderBG.png");
+}
+
+#header {
+	/*margin: 0;*/
+	width: 1020px;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	margin: auto;
+	height: 100px;
+	/*border-top: 3px solid #C9E0ED;*/
+
 }
 
-#content
-{
-    padding: 20px;
+#logo {
+	background-image: url('../images/CvetexLogo.png');
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+	/*padding-top: 10px;*/
+	/*padding-bottom: 10px;*/
+	/*margin-left: 20px;*/
+	width: 490px;
+	height: 100px;
 }
 
-#sidebar
-{
+#slideShowContainer {
+	background: #000000;
+}
+
+#slideShow {
+	background: url('../images/SlideShow01.jpg');
+	margin: auto;
+	width: 1020px;
+	height: 346px;
+}
+#contentContainer {
+	background: url('../images/MainBG.png');
+}
+#content {
+	width: 1020px;
+	margin: auto;
+	padding: 20px;
+}
+
+#sidebar {
 	padding: 20px 20px 20px 0;
 }
-
-#footer
-{
-	padding: 10px;
-	margin: 10px 20px;
-	font-size: 0.8em;
-	text-align: center;
-	border-top: 1px solid #C9E0ED;
+#footerContainer {
+	background: #161618;
 }
-
-#logo
-{
+#footer {
+	/*padding: 10px;*/
+	/*margin: 10px 20px;*/
+	/*font-size: 0.8em;*/
+	/*text-align: center;*/
+	/*border-top: 1px solid #C9E0ED;*/
+}
+#sideMenu {
+	float: left;
+	width: 250px;
+}
+#mainContent {
+	float: left;
+	width: 710px;
+	margin-left: 20px;
+}
+#logo {
+	float: left;
 	padding: 10px 20px;
 	font-size: 200%;
 }
-
-#mainmenu
-{
-	background:white url(bg.gif) repeat-x left top;
+#contacUs {
+	float: right;
+}
+#mainmenu {
+	background: white url(bg.gif) repeat-x left top;
 }
 
-#mainmenu ul
-{
-	padding:6px 20px 5px 20px;
-	margin:0px;
+#mainmenu ul {
+	padding: 6px 20px 5px 20px;
+	margin: 0px;
+	text-align: left;
 }
 
-#mainmenu ul li
-{
+#mainmenu ul li {
 	display: inline;
 }
 
-#mainmenu ul li a
-{
-	color:#ffffff;
-	background-color:transparent;
-	font-size:12px;
-	font-weight:bold;
-	text-decoration:none;
-	padding:5px 8px;
+#mainmenu ul li a {
+	color: #ffffff;
+	background-color: transparent;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px 8px;
 }
 
-#mainmenu ul li a:hover, #mainmenu ul li.active a
-{
+#mainmenu ul li a:hover, #mainmenu ul li.active a {
 	color: #6399cd;
-	background-color:#EFF4FA;
-	text-decoration:none;
+	background-color: #EFF4FA;
+	text-decoration: none;
 }
 
-div.flash-error, div.flash-notice, div.flash-success
-{
-	padding:.8em;
-	margin-bottom:1em;
-	border:2px solid #ddd;
+div.flash-error, div.flash-notice, div.flash-success {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #ddd;
 }
 
-div.flash-error
-{
-	background:#FBE3E4;
-	color:#8a1f11;
-	border-color:#FBC2C4;
+div.flash-error {
+	background: #FBE3E4;
+	color: #8a1f11;
+	border-color: #FBC2C4;
 }
 
-div.flash-notice
-{
-	background:#FFF6BF;
-	color:#514721;
-	border-color:#FFD324;
+div.flash-notice {
+	background: #FFF6BF;
+	color: #514721;
+	border-color: #FFD324;
 }
 
-div.flash-success
-{
-	background:#E6EFC2;
-	color:#264409;
-	border-color:#C6D880;
+div.flash-success {
+	background: #E6EFC2;
+	color: #264409;
+	border-color: #C6D880;
 }
 
-div.flash-error a
-{
-	color:#8a1f11;
+div.flash-error a {
+	color: #8a1f11;
 }
 
-div.flash-notice a
-{
-	color:#514721;
+div.flash-notice a {
+	color: #514721;
 }
 
-div.flash-success a
-{
-	color:#264409;
+div.flash-success a {
+	color: #264409;
 }
 
-div.form .rememberMe label
-{
+div.form .rememberMe label {
 	display: inline;
 }
 
-div.view
-{
+div.view {
 	padding: 10px;
 	margin: 10px 0;
 	border: 1px solid #C9E0ED;
 }
 
-div.breadcrumbs
-{
+div.breadcrumbs {
 	font-size: 0.9em;
 	padding: 5px 20px;
 }
 
-div.breadcrumbs span
-{
+div.breadcrumbs span {
 	font-weight: bold;
 }
 
-div.search-form
-{
+div.search-form {
 	padding: 10px;
 	margin: 10px 0;
 	background: #eee;
 }
 
-.portlet
-{
+.portlet {
 
 }
 
-.portlet-decoration
-{
+.portlet-decoration {
 	padding: 3px 8px;
 	background: #B7D6E7;
 	border-left: 5px solid #6FACCF;
 }
 
-.portlet-title
-{
+.portlet-title {
 	font-size: 12px;
 	font-weight: bold;
 	padding: 0;
@@ -174,42 +198,36 @@ div.search-form
 	color: #298dcd;
 }
 
-.portlet-content
-{
-	font-size:0.9em;
+.portlet-content {
+	font-size: 0.9em;
 	margin: 0 0 15px 0;
 	padding: 5px 8px;
-	background:#EFFDFF;
+	background: #EFFDFF;
 }
 
-.portlet-content ul
-{
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin: 0;
-	padding: 0;
-}
-
-.portlet-content li
-{
-	padding: 2px 0 4px 0px;
-}
-
-.operations
-{
+.portlet-content ul {
+	list-style-image: none;
+	list-style-position: outside;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.operations li
-{
+.portlet-content li {
+	padding: 2px 0 4px 0px;
+}
+
+.operations {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li {
 	padding-bottom: 2px;
 }
 
-.operations li a
-{
+.operations li a {
 	font: bold 12px Arial;
 	color: #0066A4;
 	display: block;
@@ -218,12 +236,88 @@ div.search-form
 	text-decoration: none;
 }
 
-.operations li a:visited
-{
+.operations li a:visited {
 	color: #0066A4;
 }
 
-.operations li a:hover
-{
+.operations li a:hover {
 	background: #80CFFF;
+}
+
+.sportThumbnailsContainer {
+	float: left;
+	padding: 5px;
+	display: block;
+	width: 740px;
+	margin: auto;
+}
+.sportThumbnailsTile {
+	display: block;
+	height: 356px;
+	margin: auto;
+}
+.sportThumbnails {
+	float: left;
+	display: block;
+	background: url('../images/bm01f-161200_thumb.jpg');
+	text-indent: -99999px;
+	border-style: solid;
+	border-color: #FFF;
+	border-width: 2px;
+	width: 230px;
+	height: 173px;
+	box-shadow: 0px 2px 3px #000;
+	margin-right: 12px;
+	margin-bottom: 12px;
+}
+.sportThumbnails:hover {
+	border-color: #605ca9;
+}
+
+.infoContainer {
+	float: left;
+	width: 260px;
+	margin: auto;
+	padding: 5px;
+	display: block;
+}
+.infoTxtContainer {
+	padding: 5px;
+	font-size: 14px;
+	text-align: justify;
+	display: block;
+	background: url('../images/InfoBG.png');
+	height: 356px;
+	margin: auto;
+	box-shadow: 0px 2px 3px #000;
+}
+.infoTxt {
+	height: 314px;
+	padding: 5px;
+}
+.infoNav {
+	float: left;
+	font-size: 16px;
+	padding: 5px;
+}
+.infoNavActive {
+	float: left;
+	font-size: 16px;
+	padding: 5px;
+	color: #605ca9;
+}
+.infoNav2 {
+	float: left;
+	font-size: 14px;
+	padding: 3px;
+	margin-top: 11px;
+	padding-right: 27px;
+}
+.infoNav:hover {
+	background: #605ca9;
+	color: #FFF;
+}
+
+.clear {
+	clear: both;
 }
