@@ -82,6 +82,15 @@ body {
 	width: 710px;
 	margin-left: 20px;
 }
+.MainContent2 {
+	float: left;
+	margin: auto;
+	width: 480px;
+}
+.MainContentContainer1 {
+	margin: auto;
+	width: 1020px;
+}
 #logo {
 	float: left;
 	padding: 10px 20px;
@@ -259,8 +268,8 @@ div.search-form {
 .sportThumbnails {
 	float: left;
 	display: block;
-	background: url('../images/bm01f-161200_thumb.jpg');
-	text-indent: -99999px;
+	/*background: url('../images/bm01f-161200_thumb.jpg');*/
+	/*text-indent: -99999px;*/
 	border-style: solid;
 	border-color: #FFF;
 	border-width: 2px;
@@ -297,18 +306,20 @@ div.search-form {
 }
 .infoNav {
 	float: left;
-	font-size: 16px;
+	font-size: 13px;
+	font-weight: bold;
 	padding: 5px;
 }
 .infoNavActive {
 	float: left;
-	font-size: 16px;
+	font-size: 13px;
+	font-weight: bold;
 	padding: 5px;
 	color: #605ca9;
 }
 .infoNav2 {
 	float: left;
-	font-size: 14px;
+	font-size: 12px;
 	padding: 3px;
 	margin-top: 11px;
 	padding-right: 27px;
@@ -320,4 +331,106 @@ div.search-form {
 
 .clear {
 	clear: both;
+}
+
+.infoTxtContainer {
+	padding: 5px;
+	font-size: 14px;
+	text-align: justify;
+	display: block;
+	background: url('../images/InfoBG.png');
+	height: 356px;
+	margin: auto;
+	box-shadow: 0px 2px 3px #000;
+}
+.infoTxt {
+	height: 314px;
+	padding: 5px;
+}
+.infoNav:hover {
+	background: #605ca9;
+	color: #FFF;
+	cursor: pointer;
+}
+.sportColorImage {
+	margin-top: 6px;
+	display: block;
+	/*background: url('../images/bm01f-161200_mid.jpg');*/
+	border-style: solid;
+	border-color: #FFF;
+	border-width: 2px;
+	/*text-indent: -99999px;*/
+	height: 362px;
+	box-shadow: 0px 2px 3px #000;
+}
+.colorBox {
+	display: block;
+	float: left;
+	background: #FFF;
+	text-indent: -99999px;
+	margin-top: 0px;
+	margin: 4px;
+	width: 38px;
+	height: 32px;
+	padding: 2px;
+	box-shadow: 0px 2px 3px #000;
+}
+.colorBox:hover {
+	padding: 0px;
+	border-style: solid;
+	border-color: #FFF;
+	border-width: 2px;
+}
+.infoTxtSingleDouble {
+	width: 260px;
+}
+.roundSelectField {
+	float: left;
+	display: block;
+	padding: 1px;
+	margin-top: 14px;
+	margin-left: 3px;
+	text-indent: -99999px;
+	background: url('../images/roundSelectField.png');
+	background-repeat: no-repeat;
+	height: 14px;
+	width: 14px;
+	padding-right: 5px;
+}
+.roundSelectField:hover {
+	background: url('../images/roundSelectFieldHover.png');
+	background-repeat: no-repeat;
+}
+.roundSelectField#activeRound {
+	float: left;
+	display: block;
+	padding: 1px;
+	margin-top: 14px;
+	margin-left: 3px;
+	text-indent: -99999px;
+	background: url('../images/roundSelectFieldActive.png');
+	background-repeat: no-repeat;
+	height: 14px;
+	width: 14px;
+	padding-right: 5px;
+}
+.roundSelectField#activeRound:hover {
+	background: url('../images/roundSelectFieldActive.png');
+	background-repeat: no-repeat;
+}
+.colorBox#White:hover {
+	padding: 0px;
+	border-style: solid;
+	border-color: #CCC;
+	border-width: 2px;
+}
+.sportThumbnailsContainer2 {
+	padding: 5px;
+	display: block;
+	margin: auto;
+}
+.sportThumbnailsTile {
+	display: block;
+	height: 356px;
+	margin: auto;
 }

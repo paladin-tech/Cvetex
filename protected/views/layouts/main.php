@@ -39,22 +39,14 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-	<!--	<div id="mainmenu">-->
-	<!--		--><?php //$this->widget('zii.widgets.CMenu', array(
-	//			'items' => array(
-	//				array('label' => 'Home', 'url' => array('/site/index')),
-	//				array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-	//				array('label' => 'Contact', 'url' => array('/site/contact')),
-	//				array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-	//				array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-	//			),
-	//		)); ?>
-	<!--	</div>-->
 	<div id="navContainer">
 		<div id="mainMbMenu">
 			<?php $this->widget('application.extensions.mbmenu.MbMenu', array(
 				'items' => array(
 					array('label' => 'Home', 'url' => array('/site/index')),
+					array('label' => '3D Kit Designer', 'url' => array('/site/index')),
+					array('label' => 'Reference', 'url' => array('/site/index')),
+					array('label' => 'About Us', 'url' => array('/site/index')),
 					array('label' => 'Contact', 'url' => array('/site/contact'),
 					      'items' => array(
 						      array('label' => 'sub 1 contact'),

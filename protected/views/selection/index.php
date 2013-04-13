@@ -2,7 +2,7 @@
 	<div class="mainTitle">C H O O S E&nbsp;&nbsp;&nbsp;Y O U R&nbsp;&nbsp;&nbsp;M O D E L</div>
 	<div class="sportThumbnailsTile"><?php
 		foreach($selection as $article) { ?>
-		<div class="sportThumbnails"><img src="images/bm01f-161200_thumb.jpg" ></div><?
+		<div class="sportThumbnails" id="<?php echo $article->articleId ?>"><a href="<?php echo $this->createUrl('selection/3DKit', array('articleId' => $article->articleId))?>"><img src="images/bm01f-161200_thumb.jpg" ></a></div><?
 		} ?>
 	</div>
 </div>
@@ -17,3 +17,11 @@
 		<div class="infoNav" style="margin-left: 41px">NEXT STEP</div>
 	</div>
 </div>
+<!--<script>-->
+<!--$(document).ready(function() {-->
+<!--	$('.sportThumbnails').click(function() {-->
+<!--//		window.location.href = '';-->
+<!--		alert($(this).attr('id'));-->
+<!--	});-->
+<!--});-->
+<!--</script>-->
