@@ -1,27 +1,8 @@
-<div class="sportThumbnailsContainer">
-	<div class="mainTitle">C H O O S E&nbsp;&nbsp;&nbsp;Y O U R&nbsp;&nbsp;&nbsp;M O D E L</div>
-	<div class="sportThumbnailsTile"><?php
-		foreach($selection as $article) { ?>
-		<div class="sportThumbnails" id="<?php echo $article->articleId ?>"><a href="<?php echo $this->createUrl('selection/3DKit', array('articleId' => $article->articleId))?>"><img src="images/bm01f-161200_thumb.jpg" ></a></div><?
-		} ?>
-	</div>
+<? $this->renderPartial('/selection/sideMenu') ?>
+<div id="mainContent">
+	<h1>Custom Football Kits</h1>
+	<p>Cvetex manufactures customised team kits of professional quality. Your shirt is created according to your exact specifications. Choose your own design, colours, texts and add any logos. All for no extra cost. Cvetex also offers bespoke football shorts and socks. Click here to see a complete overview of our products.</p>
+	<p class="mainTextKit"><a href="<?= $this->createUrl("selection/catalogue", array("sportId" => "4")) ?>">Free Design - Kit Designer</a></p>
+	<p>Create your jersey online, quick and easy with the team kit designer.</p>
 </div>
-<div class="infoContainer">
-	<div class="mainTitle">I N F O</div>
-	<div class="infoTxtContainer">
-		<div class="infoTxt">
-			Collar: Round, V-neck and continental.<br><br>
-			This shirt is available in a raglan and set in sleeve. The fabric is made up of 10% lycra and 90% polyester, it is designed to feel like wearing a second skin, super light and incredibly versatile. This shirt is for the fittest, and looks amazing on those at their physical peak. Ideal for 7's, Touch or even just to wear at your leisure!
-		</div>
-		<div class="infoNav">ORDERING INFO</div>
-		<div class="infoNav" style="margin-left: 41px">NEXT STEP</div>
-	</div>
-</div>
-<!--<script>-->
-<!--$(document).ready(function() {-->
-<!--	$('.sportThumbnails').click(function() {-->
-<!--//		window.location.href = '';-->
-<!--		alert($(this).attr('id'));-->
-<!--	});-->
-<!--});-->
-<!--</script>-->
+<div class="clear"></div>

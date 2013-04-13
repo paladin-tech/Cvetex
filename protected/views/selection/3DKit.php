@@ -58,7 +58,7 @@
 		<div class="sportThumbnailsContainer2">
 			<div class="mainTitle2">CLICK ON IMAGE TO VIEW LARGE</div>
 			<div class="sportThumbnailsTile">
-				<div class="sportColorImage"><img id="3DKitImage" src=""></div>
+				<div class="sportColorImage"><img id="3DKitImage" src="imagesKit/ba-m-<?= $selection->articleId?>-med.jpg"></div>
 			</div>
 		</div>
 	</div>

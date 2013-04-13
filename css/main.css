@@ -434,3 +434,19 @@ div.search-form {
 	height: 356px;
 	margin: auto;
 }
+
+.mainTextKit{
+	font-size: 18px;
+	margin-left: 2px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #605ca9;
+	color: #FFF;
+	font-weight: bold;
+	width: 220px;
+}
+.mainTextKit:hover {
+	color: #DDD;
+}

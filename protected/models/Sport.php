@@ -24,7 +24,7 @@ class Sport extends CActiveRecord
      */
     public function tableName()
     {
-        return 'sport';
+        return 'cvetex_sport';
     }
 
     /**

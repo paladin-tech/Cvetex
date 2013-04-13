@@ -2,12 +2,16 @@
 
 class SelectionController extends Controller
 {
-
 	public function actionIndex($sportId)
+	{
+		$this->render('index');
+	}
+
+	public function actionCatalogue($sportId)
 	{
 		$selection = Article::model()->findAllByAttributes(array("sportId" => $sportId));
 
-		$this->render('index', array('selection' => $selection));
+		$this->render('catalogue', array('selection' => $selection));
 	}
 
 	public function action3DKit($articleId)

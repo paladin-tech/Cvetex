@@ -34,7 +34,7 @@ class Article extends CActiveRecord
      */
     public function tableName()
     {
-        return 'article';
+        return 'cvetex_article';
     }
 
     /**
