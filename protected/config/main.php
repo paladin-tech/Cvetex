@@ -50,6 +50,13 @@ return array(
 //        ),
 		// uncomment the following to use a MySQL database
 
+//		'db'           => array(
+//			'connectionString' => 'mysql:host=194.9.95.2;dbname=lighthouse_rs',
+//			'emulatePrepare'   => true,
+//			'username'         => 'light_co_yu@l321',
+//			'password'         => 'yfk6r7o2achm1v19',
+//			'charset'          => 'utf8',
+//		),
 		'db'           => array(
 			'connectionString' => 'mysql:host=localhost;dbname=cvetex',
 			'emulatePrepare'   => true,
