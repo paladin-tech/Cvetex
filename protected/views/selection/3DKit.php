@@ -58,7 +58,7 @@
 		<div class="sportThumbnailsContainer2">
 			<div class="mainTitle2">CLICK ON IMAGE TO VIEW LARGE</div>
 			<div class="sportThumbnailsTile">
-				<div class="sportColorImage"><a href="imagesKit/ba-m-<?= $selection->articleId?>-med.jpg" id="3DKitImageLightbox" rel="lightbox" title="3D Kit"><img id="3DKitImage" src="imagesKit/ba-m-<?= $selection->articleId?>-med.jpg"></a></div>
+				<div class="sportColorImage"><a href="imagesKit/ba-m-<?= $selection->articleId?>-big.jpg" id="3DKitImageLightbox" rel="lightbox" title="3D Kit"><img id="3DKitImage" src="imagesKit/ba-m-<?= $selection->articleId?>-med.jpg"></a></div>
 			</div>
 		</div>
 	</div>
@@ -98,7 +98,7 @@ $(document).ready(function() {
 			},
 			success: function(data) {
 				$('#3DKitImage').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'.jpg');
-				$('#3DKitImageLightbox').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'.jpg');
+				$('#3DKitImageLightbox').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-big.jpg');
 			}
 		});
 	});

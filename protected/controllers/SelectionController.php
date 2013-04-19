@@ -50,6 +50,7 @@ class SelectionController extends Controller
 		$color5 = $_POST['color5'];
 
 		$targetfile = "imagesKit/target-{$articleId}-{$color1}-{$color2}-{$color3}.jpg";
+		$targetfileBig = "imagesKit/target-{$articleId}-{$color1}-{$color2}-{$color3}-big.jpg";
 		$photoFrame = imagecreatetruecolor(1024, 768);
 		$photoAplikacija0 = imagecreatefrompng("imagesKit/ba-m-bg.png");
 		$photoAplikacija1 = imagecreatefrompng("imagesKit/ba-m-{$articleId}-1-{$color1}.png");
@@ -65,13 +66,13 @@ class SelectionController extends Controller
 		imagecopy($photoFrame, $photoAplikacija4, 0, 0, 0, 0, 1024, 768);
 		imagecopy($photoFrame, $photoAplikacija5, 0, 0, 0, 0, 1024, 768);
 		imagecopy($photoFrame, $photoCvetex, 0, 0, 0, 0, 1024, 768);
-//		imagejpeg($photoFrame, $targetfile);
+		imagejpeg($photoFrame, $targetfileBig, 100);
 //		imagedestroy($photoFrame);
 //		$response = array('ok' => 'ok');
 //		echo json_encode($response);
 		$dest = imagecreatetruecolor(466, 362);
 		imagecopyresampled($dest, $photoFrame, 0, 0, 0, 0, 466, 362, imagesx($photoFrame), imagesy($photoFrame));
-		imagejpeg($dest, $targetfile, 100);
+		imagejpeg($dest, $targetfile, 80);
 		imagedestroy($dest);
 	}
 }
