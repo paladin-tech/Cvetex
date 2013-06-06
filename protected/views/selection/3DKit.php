@@ -97,8 +97,8 @@ $(document).ready(function() {
 				color5: $('#kitColor5').val()
 			},
 			success: function(data) {
-				$('#3DKitImage').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'.jpg');
-				$('#3DKitImageLightbox').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-big.jpg');
+				$('#3DKitImage').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'.jpg');
+				$('#3DKitImageLightbox').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-big.jpg');
 			}
 		});
 	});
