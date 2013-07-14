@@ -7,12 +7,14 @@ body {
 	font-family: "Trebuchet MS";
 	font-size: 14px;
 	/*text-align: center;*/
+	background: url("../images/Cvetex-BG.jpg") #000000 no-repeat;
+	background-position: center;
 }
 
 #page {
 	/*margin-top: 5px;*/
 	/*margin-bottom: 5px;*/
-	background: white;
+	/*background: white;*/
 	/*border: 1px solid #C9E0ED;*/
 }
 
@@ -42,7 +44,7 @@ body {
 }
 
 #slideShowContainer {
-	background: #000000;
+	/*background: #000000;*/
 }
 
 #slideShow {
@@ -52,12 +54,13 @@ body {
 	height: 346px;
 }
 #contentContainer {
-	background: url('../images/MainBG.png');
+	/*background: url('../images/MainBG.png');*/
 }
 #content {
 	width: 1020px;
 	margin: auto;
 	padding: 20px;
+	background: url('../images/MainBG.png');
 }
 
 #sidebar {

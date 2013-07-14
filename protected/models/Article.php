@@ -50,7 +50,7 @@ class Article extends CActiveRecord
             array('sex', 'length', 'max' => 10),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('articleId, articleName, sportId, sizes, techCharacteristics, collarType, zipper, sex, colors', 'safe', 'on' => 'search'),
+            array('articleId, articleName, sportId, sizes, techCharacteristics, collarType, zipper, sex, colors, type', 'safe', 'on' => 'search'),
         );
     }
 
@@ -81,6 +81,7 @@ class Article extends CActiveRecord
             'zipper' => 'Zipper',
             'sex' => 'Sex',
             'colors' => 'Colors',
+            'type' => 'Type',
         );
     }
 
@@ -104,6 +105,7 @@ class Article extends CActiveRecord
         $criteria->compare('zipper', $this->zipper);
         $criteria->compare('sex', $this->sex, true);
         $criteria->compare('colors', $this->colors, true);
+	    $criteria->compare('type', $this->type, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

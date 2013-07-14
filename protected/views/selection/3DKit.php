@@ -1,10 +1,11 @@
 <form name="frmKit" id="frmKit">
-	<input type="hidden" id="kitColor1" value="0">
+	<input type="hidden" id="kitColor1" value="1">
 	<input type="hidden" id="kitColor2" value="0">
 	<input type="hidden" id="kitColor3" value="0">
 	<input type="hidden" id="kitColor4" value="0">
 	<input type="hidden" id="kitColor5" value="0">
 	<input type="hidden" id="currentColor" value="1">
+	<input type="hidden" id="side" value="front">
 <div class="MainContentContainer1">
 	<div class="infoContainer" style="padding-top: 6px;">
 		<div class="mainTitle" style="padding-bottom: 3px;">C O L O R</div>
@@ -49,8 +50,8 @@
 			<div class="infoNav2">SINGLE-FACE</div>
 			<div class="roundSelectField">O</div>
 			<div class="infoNav2" style="padding-right: 0px;">DOUBLE-FACE</div>
-			<div class="infoNav">FRONT</div>
-			<div class="infoNav" style="margin-left: 26px">BACK</div>
+			<div class="infoNav" id="switchFront">FRONT</div>
+			<div class="infoNav" id="switchBack" style="margin-left: 26px">BACK</div>
 			<div class="infoNav" style="margin-left: 26px">SIZE CHART</div>
 		</div>
 	</div>
@@ -58,16 +59,27 @@
 		<div class="sportThumbnailsContainer2">
 			<div class="mainTitle2">CLICK ON IMAGE TO VIEW LARGE</div>
 			<div class="sportThumbnailsTile">
-				<div class="sportColorImage"><a href="imagesKit/ba-m-<?= $selection->articleId?>-big.jpg" id="3DKitImageLightbox" rel="lightbox" title="3D Kit"><img id="3DKitImage" src="imagesKit/ba-m-<?= $selection->articleId?>-med.jpg"></a></div>
+				<div class="sportColorImage">
+					<div id="LB-Front">
+						<a href="imagesKit/target-<?= $selection->articleId?>-1-0-0-0-0-front-big.jpg" id="3DKitImageLightboxFront" rel="lightbox" title="3D Kit"><img id="3DKitImageFront" src="imagesKit/target-<?= $selection->articleId?>-1-0-0-0-0-front.jpg"></a>
+					</div>
+					<div id="LB-Back" style="display: none">
+						<a href="imagesKit/target-<?= $selection->articleId?>-1-0-0-0-0-rear-big.jpg" id="3DKitImageLightboxBack" rel="lightbox" title="3D Kit"><img id="3DKitImageBack" src="imagesKit/target-<?= $selection->articleId?>-1-0-0-0-0-rear.jpg"></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="infoContainer" style="padding-top: 6px;">
 		<div class="mainTitle" style="padding-bottom: 3px;">D E S C R I P T I O N</div>
 		<div class="infoTxtContainer">
-			<div class="infoTxt" style="height: 285px;">Collar: Round, V-neck and continental.<BR><BR>This shirt is available in a raglan and set in sleeve. The fabric is made up of 10% lycra and 90% polyester, it is designed to feel like wearing a second skin, super light and incredibly versatile. This shirt is for the fittest, and looks amazing on those at their physical peak. Ideal for 7's, Touch or even just to wear at your leisure!</div>
+			<div class="infoTxt" style="height: 285px;">
+				<?= $selection->type ?><br><br>
+				Collar: <?= $selection->collarType ?><br><br>
+				Material technical characteristics: <?= $selection->techCharacteristics ?>
+			</div>
 			<div class="infoNav">PREVIOUS STEP</div>
-			<div class="infoNav" style="margin-left: 44px">NEXT STEP</div>
+			<div class="infoNav" style="margin-left: 44px" onclick="location.href = '<?= $this->createUrl('selection/orderForm', array('articleId' => $selection->articleId)) ?>&colors='+$('#kitColor1').val()+':'+$('#kitColor2').val()+':'+$('#kitColor3').val()+':'+$('#kitColor4').val()+':'+$('#kitColor5').val()">NEXT STEP</div>
 			<div class="infoNav" style="margin-left: 60px">HOW TO ORDER</div>
 		</div>
 	</div>
@@ -89,7 +101,8 @@ $(document).ready(function() {
 			dataType: 'json',
 			type: 'POST',
 			data: {
-				articleId: '<?= $selection->articleId?>',
+				articleId: '<?= $selection->articleId ?>',
+				sportId: '<?= $selection->sportId ?>',
 				color1: $('#kitColor1').val(),
 				color2: $('#kitColor2').val(),
 				color3: $('#kitColor3').val(),
@@ -97,10 +110,20 @@ $(document).ready(function() {
 				color5: $('#kitColor5').val()
 			},
 			success: function(data) {
-				$('#3DKitImage').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'.jpg');
-				$('#3DKitImageLightbox').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-big.jpg');
+				$('#3DKitImageFront').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-front.jpg');
+				$('#3DKitImageLightboxFront').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-front-big.jpg');
 			}
 		});
+	});
+	$('#switchFront').click(function() {
+		$('#LB-Front').show();
+		$('#LB-Back').hide();
+	});
+	$('#switchBack').click(function() {
+		$('#3DKitImageBack').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-rear.jpg');
+		$('#3DKitImageLightboxBack').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-rear-big.jpg');
+		$('#LB-Front').hide();
+		$('#LB-Back').show();
 	});
 });
 </script>
