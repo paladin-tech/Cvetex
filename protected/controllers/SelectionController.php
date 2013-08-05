@@ -7,9 +7,9 @@ class SelectionController extends Controller
 		$this->render('index');
 	}
 
-	public function actionCatalogue($sportId)
+	public function actionCatalogue($sportId, $sex)
 	{
-		$selection = Article::model()->findAllByAttributes(array("sportId" => $sportId));
+		$selection = Article::model()->findAllByAttributes(array('sportId' => $sportId, 'sex' => $sex));
 
 		$this->render('catalogue', array('selection' => $selection));
 	}
@@ -27,7 +27,9 @@ class SelectionController extends Controller
 	{
 		$selection = Article::model()->findByPk($articleId);
 
-		$this->render('orderForm', array('selection' => $selection, 'colors' => $colors));
+		$orderForm = new FormOrder();
+
+		$this->render('orderForm', array('selection' => $selection, 'colors' => $colors, 'orderForm' => $orderForm));
 	}
 
 	public function actionTest()

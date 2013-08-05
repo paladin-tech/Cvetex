@@ -79,7 +79,7 @@
 				Material technical characteristics: <?= $selection->techCharacteristics ?>
 			</div>
 			<div class="infoNav">PREVIOUS STEP</div>
-			<div class="infoNav" style="margin-left: 44px" onclick="location.href = '<?= $this->createUrl('selection/orderForm', array('articleId' => $selection->articleId)) ?>&colors='+$('#kitColor1').val()+':'+$('#kitColor2').val()+':'+$('#kitColor3').val()+':'+$('#kitColor4').val()+':'+$('#kitColor5').val()">NEXT STEP</div>
+			<div class="infoNav" style="margin-left: 44px" onclick="location.href = '<?= $this->createUrl('order/create', array('articleId' => $selection->articleId)) ?>&colors='+$('#kitColor1').val()+':'+$('#kitColor2').val()+':'+$('#kitColor3').val()+':'+$('#kitColor4').val()+':'+$('#kitColor5').val()">NEXT STEP</div>
 			<div class="infoNav" style="margin-left: 60px">HOW TO ORDER</div>
 		</div>
 	</div>
@@ -111,6 +111,7 @@ $(document).ready(function() {
 			},
 			success: function(data) {
 				$('#3DKitImageFront').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-front.jpg');
+				$('#3DKitImageBack').attr('src', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-rear.jpg');
 				$('#3DKitImageLightboxFront').attr('href', 'imagesKit/target-<?= $selection->articleId?>-'+$('#kitColor1').val()+'-'+$('#kitColor2').val()+'-'+$('#kitColor3').val()+'-'+$('#kitColor4').val()+'-'+$('#kitColor5').val()+'-front-big.jpg');
 			}
 		});

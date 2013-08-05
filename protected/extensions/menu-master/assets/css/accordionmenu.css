@@ -6,7 +6,7 @@ ul.accordion-menu{
   border-radius: 4px 4px 4px 4px;
   padding: 15px 0;
   margin: 3px 6px;
-  background: url("../images/menu_separate.png") repeat-x scroll 0 15px #686d73;
+  /*background: url("../images/menu_separate.png") repeat-x scroll 0 15px #686d73;*/
 }
 ul.accordion-menu li{
   background: url("../images/menu_separate.png") repeat-x scroll 0 bottom transparent;

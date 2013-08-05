@@ -2,61 +2,61 @@
 	<?php $this->widget('application.extensions.menu-master.EMenu', array('items' => array(
 		10  => array(
 			'name'   => 'Football',
-			'link'   => 'index.php?r=selection/index&sportId=3',
+			'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 //				'icon'   => 'th-large',
 			'active' => 'dashboard',
 			'sub'    => array(
 				10 => array(
 					'name'   => 'Jerseys',
-					'link'   => 'index.php?r=article/category',
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/index',
 				),
 				20 => array(
 					'name'   => 'Shorts',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				),
 				30 => array(
 					'name'   => 'Socks',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				),
 				40 => array(
 					'name'   => 'Track Suits',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				),
 				50 => array(
 					'name'   => 'Markers',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				),
 				60 => array(
 					'name'   => 'Polo Shirts',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				),
 				70 => array(
 					'name'   => 'Bags',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=3&sex=m',
 					'active' => 'demo/second',
 				)
 			)
 		),
 		20  => array(
 			'name'   => 'Basketball',
-			'link'   => 'index.php?r=selection/catalogue&sportId=4',
+			'link'   => 'index.php?r=selection/index&sportId=4&sex=m',
 //				'icon'   => 'text-width',
 			'active' => 'demo',
 			'sub'    => array(
 				10 => array(
 					'name'   => 'General',
-					'link'   => $this->createUrl('demo/index'),
+					'link'   => 'index.php?r=selection/index&sportId=4&sex=m',
 					'active' => 'demo/index',
 				),
 				20 => array(
 					'name'   => 'Second',
-					'link'   => $this->createUrl('demo/second'),
+					'link'   => 'index.php?r=selection/index&sportId=4&sex=m',
 					'active' => 'demo/second',
 				)
 			)

@@ -1,39 +1,57 @@
-#navContainer {
-	background: url(nav1_bg.gif) repeat-x 0 100% #666e73;
+#mainMbMenu {
+	background: url('../../images/NavigationMain.png') repeat-x;
+	margin-top: -21px;
+}
+
+/*#navContainer {*/
+	/*background: url(nav1_bg.gif) repeat-x 0 100% #666e73;*/
+	/*background: url('../../images/NavigationMain.png') repeat-x;*/
+	/*height: 36px;*/
+/*}*/
+
+#nav-container {
+	width: 1020px;
+	height: 36px;
+	margin: auto;
 }
 
 #nav-bar {
-	border-top: 1px solid #2d444f;
-	border-bottom: 1px solid #2d444f;
+	/*border-top: 1px solid #2d444f;*/
+	/*border-bottom: 1px solid #2d444f;*/
 	padding: 0 30px;
-	width: 1020px;
+	width: 960px;
+	height: 36px;
 	margin: auto;
 }
 
 #nav {
-	color: #000;
+	/*color: #000;*/
 	font-weight: bold;
-	float: left;
-	margin: 0;
+	/*float: left;*/
+	/*margin: 0;*/
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	/*margin: 0;*/
+	/*padding: 0;*/
 }
 
 /************** ALL LEVELS  *************/
 #nav li {
 	position: relative;
 	text-align: left;
+	height: 36px;
+	line-height: 36px;
 }
 
 #nav li.over {
 	z-index: 99;
+	color: #000;
 }
 
 #nav li.active {
 	z-index: 100;
+	color: #605ca9;
 }
 
 #nav a, #nav a:hover {
@@ -56,14 +74,22 @@
 /************ 1ST LEVEL  ***************/
 #nav li {
 	float: left;
-	background: url(nav1_sep.gif) no-repeat 100% 0;
+	text-align: left;
+	height: 36px;
+	line-height: 36px;
+	/*padding: 5px 10px 5px 10px;*/
+	/*margin: 3px;*/
+	/*background: url(nav1_sep.gif) no-repeat 100% 0;*/
 }
 
 #nav li.active {
 	margin-left: -1px;
-	background: url(nav1_active.gif) no-repeat;
-	color: #fff;
+	/*background: url(nav1_active.gif) no-repeat;*/
+	/*color: #fff;*/
+	color: #605ca9;
 	font-weight: bold;
+	height: 36px;
+	line-height: 36px;
 }
 
 #nav li.active em {
@@ -73,18 +99,20 @@
 	right: -1px;
 	width: 3px;
 	height: 27px;
-	background: url(nav1_active.gif) no-repeat 100% 0;
+	/*background: url(nav1_active.gif) no-repeat 100% 0;*/
 }
 
 #nav a {
 	float: left;
 	padding: 0 14px;
-	color: #fff;
-	line-height: 27px;
+	/*color: #fff;*/
+	/*line-height: 27px;*/
 }
 
 #nav li.over a {
-	color: #d6e2e5;
+	/*color: #d6e2e5;*/
+	color: #FFF;
+	/*background: #605ca9;*/
 }
 
 /************ 1ST LEVEL RESET ************/
@@ -176,7 +204,8 @@
 
 #nav ul span,
 #nav ul li.last li span {
-	padding: 5px 15px;
+	padding: 0px 15px;
+	/*padding: 5px 15px;*/
 	background: url(nav2_link_bg.gif) repeat-x 0 100%;
 }
 

@@ -35,7 +35,7 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-	<div id="navContainer">
+<!--	<div id="navContainer">-->
 		<div id="mainMbMenu">
 			<?php $this->widget('application.extensions.mbmenu.MbMenu', array(
 				'items' => array(
@@ -44,14 +44,14 @@
 					      'items' => array(
 						      array('label' => 'Football',
 						            'items' => array(
-							            array('label' => 'Male', 'url' => array('/selection/catalogue', 'sportId' => '3')),
-							            array('label' => 'Female', 'url' => array('/selection/catalogue', 'sportId' => '3')),
+							            array('label' => 'Male', 'url' => array('/selection/catalogue', 'sportId' => '3', 'sex' => 'm')),
+							            array('label' => 'Female', 'url' => array('/selection/catalogue', 'sportId' => '3', 'sex' => 'f')),
 						            ),
 						      ),
 						      array('label' => 'Basketball',
 						            'items' => array(
-							            array('label' => 'Male', 'url' => array('/selection/catalogue', 'sportId' => '4')),
-							            array('label' => 'Female', 'url' => array('/selection/catalogue', 'sportId' => '4')),
+							            array('label' => 'Male', 'url' => array('/selection/catalogue', 'sportId' => '4', 'sex' => 'm')),
+							            array('label' => 'Female', 'url' => array('/selection/catalogue', 'sportId' => '4', 'sex' => 'f')),
 						            ),
 						      ),
 					      ),
@@ -78,7 +78,7 @@
 				),
 			)); ?>
 		</div>
-	</div>
+<!--	</div>-->
 	<div id="slideShowContainer">
 		<div id="slideShow"></div>
 	</div>
@@ -96,11 +96,19 @@
 
 	<div class="clear"></div>
 
-	<div id="footerContainer">
-		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by Cvetex.<br/>
-			All Rights Reserved.
+	<div class="footerContainer">
+		<div class="footer" style="clear: both">
+			<div class="facebook">FB</div>
+			<div class="twitter">TW</div>
+			<div class="youtube">YT</div>
+			<div class="copyright">Copyright © 2013. CVETEX. All rights reserved.</div>
+			<div class="footerTxtActive">HOMEPAGE</div>
+			<div class="footerTxt">3D KIT DESIGNER</div>
+			<div class="footerTxt">REFERENCE</div>
+			<div class="footerTxt">ABOUT US</div>
+			<div class="footerTxt">CONTACT US</div>
 		</div>
+	</div>
 		<!-- footer -->
 	</div>
 
