@@ -452,7 +452,13 @@ div.search-form {
 	font-weight: bold;
 	width: 220px;
 }
-.mainTextKit:hover {
+
+.mainTextKit a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.mainTextKit a:hover {
 	color: #DDD;
 }
 

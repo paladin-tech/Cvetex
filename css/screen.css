@@ -145,7 +145,7 @@ p .right {
 }
 
 a:focus, a:hover {
-	color: #09f;
+	/*color: #09f;*/
 }
 
 a {
