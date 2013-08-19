@@ -71,7 +71,7 @@ class OrderController extends Controller
 			$model->attributes = $_POST['Order'];
 			$model->orderTime  = date('Y-m-d H:i:s', time());
 			if ($model->save())
-//				mail('johnsie@gmail.com', 'Online Order', implode(' : ', $model->attributes), 'From: order@cvetex.rs');
+				mail('johnsie@gmail.com,office@cvetex.rs', 'Online Order', implode(' : ', $model->attributes), 'From: order@cvetex.rs');
 				$this->redirect(array('selection/3DKit', 'articleId' => $model->articleId));
 		}
 
