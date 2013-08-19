@@ -57,9 +57,11 @@ body {
 	/*background: url('../images/MainBG.png');*/
 }
 #content {
-	width: 980px;
+	width: 1020px;
+	/*width: 980px;*/
 	margin: auto;
-	padding: 20px;
+	padding: 10px 0 10px 0;
+	/*padding: 20px;*/
 	background: url('../images/MainBG.png');
 }
 
@@ -533,4 +535,47 @@ div.search-form {
 
 .footerTxt:hover{
 	color: #AAA;
+}
+
+#orderFormLeft {
+	float: left;
+	width: 250px;
+	padding: 10px;
+}
+
+#orderFormRight {
+	float: right;
+	width: 730px;
+	padding: 10px;
+}
+
+#orderFormModelImageContainer {
+	padding: 5px;
+	box-shadow: 0px 2px 3px #000;
+}
+
+.orderFormModelChosenColors {
+	float: left;
+	width: 39px;
+}
+
+.orderFormModelImage {
+	/*width: 194px;*/
+	box-shadow: 0px 2px 3px #000;
+}
+
+.orderFormTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.orderFormFieldSet {
+	padding: 5px;
+	box-shadow: 0px 2px 3px #000;
+	margin-bottom: 10px;
+}
+
+.floatLeft {
+	float: left;
 }
